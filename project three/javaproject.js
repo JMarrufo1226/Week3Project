@@ -69,7 +69,24 @@ function calculateAverage(numbers) {
 }
 console.log(calculateAverage(numbersy));
 console.log("11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.");
+const array1 = [15, 25, 35, 45];
+const array2 = [10, 20, 30, 40];
+function isFirstArrayAverageGreaterThanSecondArrayAverage(array1, array2) {
+  let sum1 = 0;
+  for (let i = 0; i < array1.length; i++) {
+    sum1 += array1[i];
+  }
+  const avg1 = sum1 / array1.length;
 
+  let sum2 = 0;
+  for (let i = 0; i < array2.length; i++) {
+    sum2 += array2[i];
+  }
+  const avg2 = sum2 / array2.length;
+
+  return avg1 > avg2;
+}
+console.log(isFirstArrayAverageGreaterThanSecondArrayAverage(array1, array2));
 console.log("12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50");
 function willBuyDrink(isHotOutside, moneyInPocket) {
   return isHotOutside && moneyInPocket > 10.50;
@@ -88,3 +105,4 @@ function findMax(array) {
 }
 console.log(findMax(numbers));
 // This function was created to quickly and easily find the maximun value in an array of numbers.
+// I couldnt figure out how to do question 6
